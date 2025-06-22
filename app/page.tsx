@@ -156,9 +156,8 @@ export default function HikeHighNepalWebsite() {
         <FloatingElements />
 
         <div
-          className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="mb-6 animate-fade-in-up">
             <Badge className="bg-blue-600/20 text-blue-200 border-blue-400/30 mb-4 animate-pulse-soft">
@@ -267,38 +266,46 @@ export default function HikeHighNepalWebsite() {
               <div>
                 <Badge className="bg-orange-100 text-orange-800 mb-4 animate-fade-in-left">About HikeHigh Nepal</Badge>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-left animation-delay-200 font-poppins">
-                  Your Expert Himalayan Guide in{" "}
+                  Welcome to HikeHigh Nepal –
+                  {" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
-                    Nepal
+                    Your Journey Begins Here
                   </span>
                 </h2>
                 <p className="text-base md:text-lg text-gray-600 leading-relaxed animate-fade-in-left animation-delay-400">
-                  I am a certified mountain guide with over 8 years of
-                  experience leading adventurers from around the world through Nepal's most spectacular peaks and
-                  trails. My passion is sharing the incredible beauty, rich culture, and spiritual essence of the
-                  Himalayas.
+                  Namaste! I’m a passionate mountaineering student and a licensed trekking guide, dedicated to leading you through the majestic trails of Nepal. With years of personal trekking experience across the Himalayas, I created HikeHigh Nepal to connect travelers, adventurers, and mountain lovers with authentic, safe, and unforgettable trekking experiences.
+
+                  This isn’t just a business – it’s my journey. From studying high-altitude survival to walking across the remote valleys and peaks of Nepal, I live and breathe the mountains. My goal is to offer you more than just a trek. I want to share my knowledge, stories, and the spirit of adventure that the mountains have given me.
+
+                  Whether you dream of standing before Everest at Base Camp, exploring the Annapurna Circuit, or discovering hidden gems off the beaten path – I’m here to guide you every step of the way.
+
+                  Let’s explore. Let’s connect. Let’s Hike High.
                 </p>
               </div>
 
               <div className="space-y-4 animate-fade-in-left animation-delay-600">
                 {[
-                  "Nepal Mountaineering Association (NMA) Certified Guide",
-                  "Wilderness First Aid & High Altitude Rescue Certified",
-                  "Fluent in English, Hindi, and Nepali languages",
-                  "Expert knowledge of hidden trails and local culture",
-                  "Specialized in Everest region and Annapurna treks",
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-3 group hover:transform hover:translate-x-2 transition-all duration-300"
-                  >
-                    <CheckCircle className="h-6 w-6 text-green-600 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300 text-sm md:text-base">
-                      {item}
-                    </span>
-                  </div>
-                ))}
+                  "Friendly, respectful, and deeply passionate about Himalayan culture",
+                  "Focus on eco-friendly and sustainable trekking",
+                  "Flexible and budget-friendly planning – Not bound by agencies",
+                  "Excellent communication and storytelling skills on the trail",
+                  "Experienced in off-the-beaten-path trails and rural village treks"].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 group hover:transform hover:translate-x-2 transition-all duration-300"
+                    >
+                      <CheckCircle className="h-6 w-6 text-green-600 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors duration-300 text-sm md:text-base">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
               </div>
+
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed animate-fade-in-left animation-delay-400">
+                I’m not an agent selling fixed-price packages. I’m a mountaineering student and a real traveler who offers honest, flexible, and personal trekking experiences—not driven by money, but by passion for the mountains.
+              </p>
+
 
               <div className="flex flex-wrap gap-3 animate-fade-in-left animation-delay-800">
                 {["Everest Base Camp", "Annapurna Circuit", "Island Peak", "Mera Peak", "Manaslu Circuit"].map(
@@ -330,9 +337,8 @@ export default function HikeHighNepalWebsite() {
               <div className="absolute -bottom-8 -left-8 bg-gradient-to-r from-orange-600 to-red-600 text-white p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
                 <div className="flex items-center space-x-3 mb-2">
                   <Award className="h-6 w-6 animate-pulse-soft" />
-                  <span className="font-semibold">NMA Certified</span>
+                  <span className="font-semibold">Certified Guide &nbsp; &nbsp;</span>
                 </div>
-                <p className="text-sm text-orange-100">Nepal Mountaineering Association</p>
               </div>
             </div>
           </div>
@@ -407,9 +413,8 @@ export default function HikeHighNepalWebsite() {
             ].map((service, index) => (
               <Card
                 key={index}
-                className={`group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative ${
-                  service.popular ? "ring-2 ring-orange-500 ring-opacity-50" : ""
-                }`}
+                className={`group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative ${service.popular ? "ring-2 ring-orange-500 ring-opacity-50" : ""
+                  }`}
               >
                 {service.popular && (
                   <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg">
@@ -448,9 +453,7 @@ export default function HikeHighNepalWebsite() {
                   </ul>
 
                   <div className="flex items-center justify-between">
-                    <span className={`text-2xl md:text-3xl font-bold text-${service.color}-600 font-poppins`}>
-                      {service.price}
-                    </span>
+
                     <Button
                       size="sm"
                       className={`bg-gradient-to-r ${service.gradient} hover:shadow-lg transition-all duration-300 transform hover:scale-105 group-hover:animate-pulse-soft`}
@@ -490,7 +493,7 @@ export default function HikeHighNepalWebsite() {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <Image
-                  src={`/images/Adventure${i+1}.jpeg?height=${i % 2 === 0 ? 300 : 250}&width=250`}
+                  src={`/images/Adventure${i + 1}.jpeg?height=${i % 2 === 0 ? 300 : 250}&width=250`}
                   alt={`HikeHigh Nepal adventure photo ${i + 1} - Himalayan trekking and mountaineering`}
                   width={250}
                   height={i % 2 === 0 ? 300 : 250}
@@ -552,11 +555,10 @@ export default function HikeHighNepalWebsite() {
               ].map((testimonial, index) => (
                 <Card
                   key={index}
-                  className={`transition-all duration-500 transform ${
-                    index === activeTestimonial
-                      ? "opacity-100 scale-100 translate-x-0"
-                      : "opacity-0 scale-95 translate-x-8 absolute inset-0"
-                  } bg-white/80 backdrop-blur-sm border-0 shadow-2xl`}
+                  className={`transition-all duration-500 transform ${index === activeTestimonial
+                    ? "opacity-100 scale-100 translate-x-0"
+                    : "opacity-0 scale-95 translate-x-8 absolute inset-0"
+                    } bg-white/80 backdrop-blur-sm border-0 shadow-2xl`}
                 >
                   <CardContent className="pt-8 pb-8 text-center">
                     <div className="flex justify-center mb-6">
@@ -593,9 +595,8 @@ export default function HikeHighNepalWebsite() {
                 <button
                   key={index}
                   onClick={() => setActiveTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === activeTestimonial ? "bg-orange-600 scale-125" : "bg-gray-300 hover:bg-gray-400"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeTestimonial ? "bg-orange-600 scale-125" : "bg-gray-300 hover:bg-gray-400"
+                    }`}
                   aria-label={`View testimonial ${index + 1}`}
                 />
               ))}
