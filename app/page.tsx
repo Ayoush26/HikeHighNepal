@@ -146,7 +146,7 @@ export default function HikeHighNepalWebsite() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-15"></div>
 
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/images/Adventure8.jpeg"
           alt="Majestic Himalayan peaks in Nepal - HikeHigh Nepal adventures"
           fill
           className="object-cover scale-105 animate-ken-burns"
@@ -273,7 +273,7 @@ export default function HikeHighNepalWebsite() {
                   </span>
                 </h2>
                 <p className="text-base md:text-lg text-gray-600 leading-relaxed animate-fade-in-left animation-delay-400">
-                  Born and raised in the heart of the Himalayas, I am a certified mountain guide with over 8 years of
+                  I am a certified mountain guide with over 8 years of
                   experience leading adventurers from around the world through Nepal's most spectacular peaks and
                   trails. My passion is sharing the incredible beauty, rich culture, and spiritual essence of the
                   Himalayas.
@@ -318,7 +318,7 @@ export default function HikeHighNepalWebsite() {
             <div className="relative animate-fade-in-right animation-delay-400">
               <div className="relative group">
                 <Image
-                  src="/placeholder.svg?height=600&width=500"
+                  src="/images/Profile.jpeg"
                   alt="Professional certified mountain guide from HikeHigh Nepal in the Himalayas"
                   width={500}
                   height={600}
@@ -490,7 +490,7 @@ export default function HikeHighNepalWebsite() {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <Image
-                  src={`/placeholder.svg?height=${i % 2 === 0 ? 300 : 250}&width=250`}
+                  src={`/images/Adventure${i+1}.jpeg?height=${i % 2 === 0 ? 300 : 250}&width=250`}
                   alt={`HikeHigh Nepal adventure photo ${i + 1} - Himalayan trekking and mountaineering`}
                   width={250}
                   height={i % 2 === 0 ? 300 : 250}

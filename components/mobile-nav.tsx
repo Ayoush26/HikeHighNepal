@@ -41,11 +41,11 @@ export function MobileNav({ currentPath }: MobileNavProps) {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${
+        className={`fixed top-0 right-0 h-full w-80 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full bg-white">
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
             <h2 className="text-xl font-bold text-gray-900 font-poppins">Menu</h2>
@@ -59,7 +59,7 @@ export function MobileNav({ currentPath }: MobileNavProps) {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex-1 px-6 py-8">
+          <nav className="flex-1 px-6 py-8 bg-white">
             <ul className="space-y-6">
               {navItems.map((item) => (
                 <li key={item.name}>
@@ -80,7 +80,7 @@ export function MobileNav({ currentPath }: MobileNavProps) {
           </nav>
 
           {/* CTA Button */}
-          <div className="p-6 border-t border-gray-200">
+          <div className="p-6 border-t border-gray-200 bg-white">
             <Button
               onClick={closeMenu}
               className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300"
@@ -91,7 +91,7 @@ export function MobileNav({ currentPath }: MobileNavProps) {
           </div>
 
           {/* Contact Info */}
-          <div className="px-6 pb-6 text-center">
+          <div className="px-6 pb-6 text-center bg-white">
             <p className="text-sm text-gray-600 mb-2">Need help planning?</p>
             <p className="text-sm font-medium text-gray-900">+977-9841234567</p>
             <p className="text-xs text-gray-500">Available 9 AM - 6 PM NPT</p>
