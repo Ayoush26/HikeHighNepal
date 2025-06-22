@@ -399,10 +399,6 @@ export default function HikeHighNepalWebsite() {
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-orange-600 font-semibold">🔹</span>
-                      <span>You manage your own food, stay, and travel – or I can help you plan it</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-600 font-semibold">🔹</span>
                       <span>I'll assist with permits, gear checklists, route planning & more</span>
                     </li>
                     <li className="flex items-start space-x-2">
