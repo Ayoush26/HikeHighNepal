@@ -9,7 +9,6 @@ import {
   Mountain,
   MapPin,
   Star,
-  Users,
   Award,
   Phone,
   Mail,
@@ -18,7 +17,6 @@ import {
   MessageCircle,
   CheckCircle,
   Calendar,
-  Compass,
   ArrowRight,
   Play,
   ChevronDown,
@@ -346,125 +344,222 @@ export default function HikeHighNepalWebsite() {
       </section>
 
       {/* Services Section */}
+            {/* Services Section */}
       <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30 relative overflow-hidden">
         <div className="absolute inset-0 bg-mountain-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-orange-100 text-orange-800 mb-4">Our Adventure Services</Badge>
+            <Badge className="bg-orange-100 text-orange-800 mb-4">Trekking Services</Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
-              Himalayan{" "}
+              Trekking Packages –{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
-                Adventures
+                Flexible & Honest Pricing
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              From beginner-friendly treks to challenging technical climbs, we offer personalized Himalayan experiences
-              for every adventure level
-            </p>
-          </div>
+            <div className="max-w-4xl mx-auto text-left bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                At HikeHigh Nepal, I don't believe in selling fixed-price packages. Instead, I follow a{" "}
+                <span className="font-semibold text-orange-600">"Pay Your Own Way"</span> approach — allowing you to
+                travel freely, choose your budget, and stay in control of your expenses.
+              </p>
+              <p className="text-base md:text-lg text-gray-600 mb-6">
+                I simply charge a daily guiding fee, and you cover your own costs for meals, accommodation, transport,
+                permits, and any porter if needed.
+              </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Mountain,
-                title: "Everest Base Camp Trek",
-                description: "14-day guided trek to the base of the world's highest peak with expert acclimatization",
-                features: [
-                  "Professional acclimatization schedule",
-                  "All permits and documentation",
-                  "Comfortable tea house accommodation",
-                  "Experienced guide and porter support",
-                ],
-                price: "$1,299",
-                color: "blue",
-                gradient: "from-blue-500 to-blue-600",
-                popular: true,
-              },
-              {
-                icon: Compass,
-                title: "Peak Climbing Expeditions",
-                description: "Technical climbing adventures for experienced mountaineers seeking summit challenges",
-                features: [
-                  "Island Peak (6,189m) expedition",
-                  "Mera Peak (6,476m) climbing",
-                  "Complete technical training included",
-                  "All climbing equipment provided",
-                ],
-                price: "$2,499",
-                color: "green",
-                gradient: "from-green-500 to-green-600",
-                popular: false,
-              },
-              {
-                icon: Users,
-                title: "Custom Nepal Adventures",
-                description: "Personalized expeditions designed around your goals, experience, and interests",
-                features: [
-                  "Completely flexible itinerary",
-                  "Private or small group options",
-                  "Photography and cultural tours",
-                  "Off-the-beaten-path experiences",
-                ],
-                price: "Custom",
-                color: "orange",
-                gradient: "from-orange-500 to-red-500",
-                popular: false,
-              },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className={`group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative ${service.popular ? "ring-2 ring-orange-500 ring-opacity-50" : ""
-                  }`}
-              >
-                {service.popular && (
-                  <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg">
-                    Most Popular
-                  </div>
-                )}
-
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                <CardHeader className="relative z-10">
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <service.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl md:text-2xl group-hover:text-orange-600 transition-colors duration-300 font-poppins">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="relative z-10">
-                  <ul className="space-y-3 text-sm text-gray-600 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform duration-300"
-                        style={{ transitionDelay: `${featureIndex * 50}ms` }}
-                      >
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span>{feature}</span>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">This way, you:</h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Pay for what you actually use",
+                      "Choose where you want to stay and eat",
+                      "Trek with full transparency and flexibility",
+                      "Avoid overpriced, commission-based tour packages",
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{item}</span>
                       </li>
                     ))}
                   </ul>
+                </div>
 
-                  <div className="flex items-center justify-between">
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                    <span className="text-2xl mr-2">💼</span>
+                    How It Works:
+                  </h3>
+                  <ul className="space-y-3 text-sm md:text-base">
+                    <li className="flex items-start space-x-2">
+                      <span className="text-orange-600 font-semibold">🔹</span>
+                      <span>
+                        <strong>My Daily Guiding Fee:</strong> $40-45 per day
+                      </span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-orange-600 font-semibold">🔹</span>
+                      <span>You manage your own food, stay, and travel – or I can help you plan it</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-orange-600 font-semibold">🔹</span>
+                      <span>I'll assist with permits, gear checklists, route planning & more</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-orange-600 font-semibold">🔹</span>
+                      <span>Need a porter? I can arrange one on request (extra cost)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Popular Treks */}
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 font-poppins flex items-center justify-center">
+                <span className="text-3xl mr-3">🌄</span>
+                Popular Treks You Can Choose
+              </h3>
+              <p className="text-lg text-gray-600">Flexible duration and customizable routes</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Everest Base Camp (EBC)",
+                  duration: "12–14 days",
+                  description: "The ultimate Himalayan adventure to the base of the world's highest peak",
+                  difficulty: "Challenging",
+                  altitude: "5,364m",
+                  highlights: ["Kala Patthar viewpoint", "Sherpa culture", "Sagarmatha National Park"],
+                  color: "blue",
+                },
+                {
+                  name: "Annapurna Base Camp (ABC)",
+                  duration: "7–10 days",
+                  description: "Spectacular mountain amphitheater surrounded by towering peaks",
+                  difficulty: "Moderate",
+                  altitude: "4,130m",
+                  highlights: ["Annapurna Sanctuary", "Diverse landscapes", "Hot springs"],
+                  color: "green",
+                },
+                {
+                  name: "Mardi Himal Trek",
+                  duration: "5–7 days",
+                  description: "Hidden gem offering pristine mountain views and fewer crowds",
+                  difficulty: "Moderate",
+                  altitude: "4,500m",
+                  highlights: ["Off-the-beaten-path", "Rhododendron forests", "Close-up Annapurna views"],
+                  color: "purple",
+                },
+                {
+                  name: "Langtang Valley Trek",
+                  duration: "7–9 days",
+                  description: "Beautiful valley trek with Tibetan culture and stunning mountain views",
+                  difficulty: "Moderate",
+                  altitude: "4,984m",
+                  highlights: ["Tibetan culture", "Kyanjin Gompa", "Langtang Lirung views"],
+                  color: "indigo",
+                },
+                {
+                  name: "Poon Hill Trek",
+                  duration: "4–5 days",
+                  description: "Perfect introduction to Himalayan trekking with sunrise views",
+                  difficulty: "Easy",
+                  altitude: "3,210m",
+                  highlights: ["Sunrise viewpoint", "Beginner-friendly", "Rhododendron blooms"],
+                  color: "orange",
+                },
+                {
+                  name: "Custom Village & Cultural Treks",
+                  duration: "You decide!",
+                  description: "Personalized treks focusing on local culture and hidden villages",
+                  difficulty: "Flexible",
+                  altitude: "Varies",
+                  highlights: ["Local communities", "Authentic experiences", "Flexible itinerary"],
+                  color: "red",
+                },
+              ].map((trek, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border-0 bg-white/90 backdrop-blur-sm overflow-hidden"
+                >
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <Badge className={`bg-${trek.color}-100 text-${trek.color}-800`}>{trek.duration}</Badge>
+                      <Badge variant="outline" className="text-xs">
+                        {trek.difficulty}
+                      </Badge>
+                    </div>
+                    <CardTitle className="text-xl group-hover:text-orange-600 transition-colors duration-300 font-poppins">
+                      {trek.name}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600 leading-relaxed">{trek.description}</CardDescription>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div className="mb-4">
+                      <div className="flex items-center space-x-4 text-sm text-gray-600 mb-3">
+                        <span className="flex items-center">
+                          <Mountain className="h-4 w-4 mr-1" />
+                          {trek.altitude}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2 mb-4">
+                      <p className="text-sm font-medium text-gray-700">Key Highlights:</p>
+                      <ul className="space-y-1">
+                        {trek.highlights.map((highlight, idx) => (
+                          <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
+                            <CheckCircle className="h-3 w-3 text-green-500" />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
                     <Button
                       size="sm"
-                      className={`bg-gradient-to-r ${service.gradient} hover:shadow-lg transition-all duration-300 transform hover:scale-105 group-hover:animate-pulse-soft`}
+                      className={`w-full bg-gradient-to-r from-${trek.color}-500 to-${trek.color}-600 hover:from-${trek.color}-600 hover:to-${trek.color}-700 transition-all duration-300 transform hover:scale-105`}
                     >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      Plan This Trek
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-12">
+              <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-2xl p-8 max-w-3xl mx-auto">
+                <h3 className="text-2xl font-bold mb-4 font-poppins">Ready to Plan Your Custom Trek?</h3>
+                <p className="text-orange-100 mb-6">
+                  Let's discuss your goals, experience level, and preferred dates. I'll help you create the perfect
+                  Himalayan adventure within your budget.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    size="lg"
+                    className="bg-white text-orange-600 hover:bg-orange-50 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Get Custom Quote
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-orange-600 transition-all duration-300"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call +977-9841234567
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
