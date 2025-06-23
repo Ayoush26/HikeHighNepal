@@ -148,7 +148,7 @@ export default function MadHoneyBlogPost() {
         {/* Featured Image */}
         <div className="relative h-64 md:h-96 mb-12 rounded-2xl overflow-hidden">
           <Image
-            src="/placeholder.svg?height=600&width=800"
+            src="/images/lamjung-trip-cover.png?height=600&width=800"
             alt="Mad honey hunting in Lamjung, Nepal - cliff climbing for wild honey"
             fill
             className="object-cover"
@@ -175,13 +175,13 @@ export default function MadHoneyBlogPost() {
 
           <div className="relative h-64 md:h-80 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Stone walled pathway with garden blooms in Ghalegaun"
+              src="/images/midnight-lamjung.jpeg"
+              alt="Ghalegaun at midnight"
               fill
               className="object-cover"
             />
             <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm">
-              Stone walled pathway with garden blooms, Ghalegaun
+              Ghalegaun at midnight
             </div>
           </div>
 
@@ -200,7 +200,7 @@ export default function MadHoneyBlogPost() {
 
           <div className="relative h-64 md:h-80 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/images/Ghattu-dance.png"
               alt="Ghatu dance performance by Gurung community"
               fill
               className="object-cover"
@@ -221,7 +221,7 @@ export default function MadHoneyBlogPost() {
 
           <div className="relative h-64 md:h-80 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/images/Ghanpokhara-village.png"
               alt="Ghanpokhara Village nestled in mountains"
               fill
               className="object-cover"
@@ -255,7 +255,7 @@ export default function MadHoneyBlogPost() {
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             <div className="relative h-48 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/images/Dense-jungle-walk.png"
                 alt="Dawn and deep into the dense jungle"
                 fill
                 className="object-cover"
@@ -266,7 +266,7 @@ export default function MadHoneyBlogPost() {
             </div>
             <div className="relative h-48 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/images/leech-attack.png"
                 alt="Bloodied socks from leech attacks"
                 fill
                 className="object-cover"
@@ -307,7 +307,7 @@ export default function MadHoneyBlogPost() {
 
           <div className="relative h-64 md:h-96 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/images/rope-cliff.png?height=600&width=800"
               alt="Buddhi dai hanging from rope on cliff with smoke rising"
               fill
               className="object-cover"
@@ -347,7 +347,7 @@ export default function MadHoneyBlogPost() {
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             <div className="relative h-48 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/images/selroti.jpeg?height=300&width=400"
                 alt="Traditional Sel Roti breakfast"
                 fill
                 className="object-cover"
@@ -358,7 +358,7 @@ export default function MadHoneyBlogPost() {
             </div>
             <div className="relative h-48 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/images/chill-water.png?height=300&width=400"
                 alt="Clear mountain stream with green vegetation"
                 fill
                 className="object-cover"
@@ -383,7 +383,7 @@ export default function MadHoneyBlogPost() {
 
           <div className="relative h-64 md:h-80 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/images/honey-filtration.png?height=400&width=600"
               alt="Honey filtration and distribution ceremony"
               fill
               className="object-cover"
@@ -424,13 +424,13 @@ export default function MadHoneyBlogPost() {
 
           <div className="relative h-64 md:h-96 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/images/last-ride.png?height=600&width=800"
               alt="UMJO BHIR mad honey cliff and BHAISAPNI VILLAGE"
               fill
               className="object-cover"
             />
             <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm">
-              Right top UMJO BHIR mad honey cliff - left bottom end BHAISAPNI VILLAGE
+              Jeep ride and Goodbye
             </div>
           </div>
         </div>
