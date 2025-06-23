@@ -113,6 +113,7 @@ export default function HikeHighNepalWebsite() {
               { name: "Services", href: "#services" },
               { name: "Gallery", href: "#gallery" },
               { name: "Reviews", href: "#testimonials" },
+              { name: "Blog", href: "/blog" },
               { name: "FAQ", href: "/faq" },
               { name: "Contact", href: "#contact" },
             ].map((item) => (
@@ -329,7 +330,8 @@ export default function HikeHighNepalWebsite() {
                   height={600}
                   className="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+               </div>
               </div>
 
               <div className="absolute -bottom-8 -left-8 bg-gradient-to-r from-orange-600 to-red-600 text-white p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -344,7 +346,6 @@ export default function HikeHighNepalWebsite() {
       </section>
 
       {/* Services Section */}
-            {/* Services Section */}
       <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30 relative overflow-hidden">
         <div className="absolute inset-0 bg-mountain-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">

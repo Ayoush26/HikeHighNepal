@@ -18,6 +18,7 @@ export function MobileNav({ currentPath }: MobileNavProps) {
     { name: "Services", href: "/#services" },
     { name: "Gallery", href: "/#gallery" },
     { name: "Reviews", href: "/#testimonials" },
+    { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/#contact" },
   ]
@@ -41,9 +42,8 @@ export function MobileNav({ currentPath }: MobileNavProps) {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-80 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full bg-white">
           {/* Header */}
@@ -66,11 +66,10 @@ export function MobileNav({ currentPath }: MobileNavProps) {
                   <Link
                     href={item.href}
                     onClick={closeMenu}
-                    className={`block text-lg font-medium transition-colors duration-200 py-2 ${
-                      currentPath === item.href
+                    className={`block text-lg font-medium transition-colors duration-200 py-2 ${currentPath === item.href
                         ? "text-orange-600 font-semibold"
                         : "text-gray-700 hover:text-orange-600"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
