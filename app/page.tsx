@@ -140,12 +140,12 @@ export default function HikeHighNepalWebsite() {
       </nav>
 
       {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-24 pb-16">
+      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-24 pb-16">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-gray-900/70 to-black/60 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-15"></div>
 
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/images/cover.jpg?height=1080&width=1920"
           alt="Majestic Himalayan peaks in Nepal - HikeHigh Nepal adventures"
           fill
           className="object-cover scale-105 animate-ken-burns"
@@ -155,28 +155,27 @@ export default function HikeHighNepalWebsite() {
         <FloatingElements />
 
         <div
-          className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="mb-6 animate-fade-in-up">
             <Badge className="bg-blue-600/20 text-blue-200 border-blue-400/30 mb-4 animate-pulse-soft">
-              🏔️ Certified Mountain Guide Since 2016
+              🏔️ Certified Guide 
             </Badge>
           </div>
 
-          <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-up animation-delay-200 font-poppins">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-up animation-delay-200 font-poppins">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-orange-300 animate-gradient">
               Respect the Mountains,
             </span>
             <br />
             <span className="text-white">Embrace the Journey</span>
             <br />
-            <span className="text-xl md:text-3xl lg:text-4xl text-blue-200 font-normal">– HikeHigh Nepal</span>
+            <span className="text-lg md:text-2xl lg:text-3xl text-blue-200 font-normal">– HikeHigh Nepal</span>
           </h1>
 
           <p className="text-lg md:text-2xl mb-8 text-gray-200 animate-fade-in-up animation-delay-400 max-w-3xl mx-auto">
-            Independent mountaineering guide • Authentic Nepal experiences • Custom adventures • Student-led,
+            Independent guide • Authentic Nepal experiences • Custom adventures • Student-led,
             passion-driven trekking
           </p>
 
@@ -331,7 +330,7 @@ export default function HikeHighNepalWebsite() {
                   ))}
               </div>
 
-               <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 animate-fade-in-left animation-delay-800">
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 animate-fade-in-left animation-delay-800">
                 <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                   <span className="text-2xl mr-3">💡</span>
                   My Philosophy
@@ -369,7 +368,7 @@ export default function HikeHighNepalWebsite() {
                   className="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               </div>
+                </div>
               </div>
 
               <div className="absolute -bottom-8 -left-8 bg-gradient-to-r from-orange-600 to-red-600 text-white p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
