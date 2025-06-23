@@ -301,9 +301,17 @@ export default function HikeHighNepalWebsite() {
                   ))}
               </div>
 
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed animate-fade-in-left animation-delay-400">
-                I’m not an agent selling fixed-price packages. I’m a mountaineering student and a real traveler who offers honest, flexible, and personal trekking experiences—not driven by money, but by passion for the mountains.
-              </p>
+               <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 animate-fade-in-left animation-delay-800">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                  <span className="text-2xl mr-3">💡</span>
+                  My Philosophy
+                </h4>
+                <p className="text-gray-700 leading-relaxed italic">
+                  "I'm not an agent selling fixed-price packages. I'm a mountaineering student and a real traveler who
+                  offers honest, flexible, and personal trekking experiences—not driven by money, but by passion for the
+                  mountains."
+                </p>
+              </div>
 
 
               <div className="flex flex-wrap gap-3 animate-fade-in-left animation-delay-800">
@@ -326,8 +334,8 @@ export default function HikeHighNepalWebsite() {
                 <Image
                   src="/images/Profile.jpeg"
                   alt="Professional certified mountain guide from HikeHigh Nepal in the Himalayas"
-                  width={500}
-                  height={600}
+                  width={700}
+                  height={800}
                   className="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
