@@ -140,12 +140,12 @@ export default function HikeHighNepalWebsite() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-24 pb-16">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-gray-900/70 to-black/60 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-15"></div>
 
         <Image
-          src="/images/Adventure8.jpeg"
+          src="/placeholder.svg?height=1080&width=1920"
           alt="Majestic Himalayan peaks in Nepal - HikeHigh Nepal adventures"
           fill
           className="object-cover scale-105 animate-ken-burns"
@@ -155,8 +155,9 @@ export default function HikeHighNepalWebsite() {
         <FloatingElements />
 
         <div
-          className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+          className={`relative z-20 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
           <div className="mb-6 animate-fade-in-up">
             <Badge className="bg-blue-600/20 text-blue-200 border-blue-400/30 mb-4 animate-pulse-soft">
@@ -164,18 +165,19 @@ export default function HikeHighNepalWebsite() {
             </Badge>
           </div>
 
-          <h1 className="text-4xl md:text-8xl font-bold mb-6 leading-tight animate-fade-in-up animation-delay-200 font-poppins">
-            Conquer the{" "}
+          <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-up animation-delay-200 font-poppins">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-orange-300 animate-gradient">
-              Himalayas
+              Respect the Mountains,
             </span>
             <br />
-            with HikeHigh Nepal
+            <span className="text-white">Embrace the Journey</span>
+            <br />
+            <span className="text-xl md:text-3xl lg:text-4xl text-blue-200 font-normal">– HikeHigh Nepal</span>
           </h1>
 
           <p className="text-lg md:text-2xl mb-8 text-gray-200 animate-fade-in-up animation-delay-400 max-w-3xl mx-auto">
-            Expert Himalayan trekking & mountaineering guide • Everest Base Camp specialist • Peak climbing expeditions
-            • Custom Nepal adventures
+            Independent mountaineering guide • Authentic Nepal experiences • Custom adventures • Student-led,
+            passion-driven trekking
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
@@ -198,25 +200,53 @@ export default function HikeHighNepalWebsite() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-6 mt-12 animate-fade-in-up animation-delay-800">
-            <div className="flex items-center space-x-2 text-sm text-blue-200">
-              <Shield className="h-4 w-4" />
-              <span>100% Safety Record</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-blue-200">
-              <Award className="h-4 w-4" />
-              <span>NMA Certified Guide</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-blue-200">
-              <Globe className="h-4 w-4" />
-              <span>50+ Countries Served</span>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12 animate-fade-in-up animation-delay-800 max-w-4xl mx-auto">
+            {[
+              {
+                icon: "🤝",
+                title: "Friendly & Authentic",
+                subtitle: "Independent Guide",
+                color: "from-blue-500 to-blue-600",
+              },
+              {
+                icon: "🙏",
+                title: "Humble & Real",
+                subtitle: "Genuine Experiences",
+                color: "from-green-500 to-green-600",
+              },
+              {
+                icon: "💚",
+                title: "Emotion-Driven",
+                subtitle: "For Nature Lovers",
+                color: "from-emerald-500 to-emerald-600",
+              },
+              {
+                icon: "🎓",
+                title: "Honest & Youthful",
+                subtitle: "Student, Not-Agency Style",
+                color: "from-orange-500 to-orange-600",
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center group">
+                <div
+                  className={`w-10 h-10 md:w-14 md:h-14 mx-auto mb-2 md:mb-3 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg`}
+                >
+                  <span className="text-lg md:text-2xl">{item.icon}</span>
+                </div>
+                <h4 className="text-xs md:text-sm font-semibold text-white mb-1 group-hover:text-orange-200 transition-colors duration-300 leading-tight">
+                  {item.title}
+                </h4>
+                <p className="text-xs text-blue-200 group-hover:text-orange-100 transition-colors duration-300 leading-tight">
+                  {item.subtitle}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-          <ChevronDown className="h-8 w-8 text-white/70" />
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+          <ChevronDown className="h-6 w-6 md:h-8 md:w-8 text-white/70" />
         </div>
       </section>
 
@@ -347,6 +377,7 @@ export default function HikeHighNepalWebsite() {
                   <Award className="h-6 w-6 animate-pulse-soft" />
                   <span className="font-semibold">Certified Guide &nbsp; &nbsp;</span>
                 </div>
+                <p className="text-sm text-orange-100">&nbsp; &nbsp; &nbsp; &nbsp;Medani Chapagain</p>
               </div>
             </div>
           </div>
