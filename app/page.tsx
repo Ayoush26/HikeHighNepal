@@ -28,6 +28,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { MobileNav } from "@/components/mobile-nav"
+import { ChatWidget } from "@/components/chat-widget"
+
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
@@ -160,7 +162,7 @@ export default function HikeHighNepalWebsite() {
         >
           <div className="mb-6 animate-fade-in-up">
             <Badge className="bg-blue-600/20 text-blue-200 border-blue-400/30 mb-4 animate-pulse-soft">
-              🏔️ Certified Guide 
+              🏔️ Certified Guide
             </Badge>
           </div>
 
@@ -853,6 +855,8 @@ export default function HikeHighNepalWebsite() {
           </div>
         </div>
       </section>
+
+      <ChatWidget />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
