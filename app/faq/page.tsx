@@ -242,17 +242,17 @@ export default function FAQPage() {
               {[
                 { name: "About", href: "/#about" },
                 { name: "Services", href: "/#services" },
-                { name: "Gallery", href: "/#gallery" },
+                { name: "Gallery", href: "/gallery" },
                 { name: "Reviews", href: "/#testimonials" },
+                { name: "Blog", href: "/blog" },
                 { name: "FAQ", href: "/faq" },
                 { name: "Contact", href: "/#contact" },
               ].map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-gray-700 hover:text-blue-600 transition-all duration-300 relative group ${
-                    item.href === "/faq" ? "text-orange-600 font-semibold" : ""
-                  }`}
+                  className={`text-gray-700 hover:text-blue-600 transition-all duration-300 relative group ${item.href === "/faq" ? "text-orange-600 font-semibold" : ""
+                    }`}
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>

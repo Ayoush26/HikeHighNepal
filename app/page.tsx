@@ -23,6 +23,7 @@ import {
   Shield,
   Clock,
   Globe,
+  Camera
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -113,7 +114,7 @@ export default function HikeHighNepalWebsite() {
             {[
               { name: "About", href: "#about" },
               { name: "Services", href: "#services" },
-              { name: "Gallery", href: "#gallery" },
+              { name: "Gallery", href: "gallery" },
               { name: "Reviews", href: "#testimonials" },
               { name: "Blog", href: "/blog" },
               { name: "FAQ", href: "/faq" },
@@ -638,6 +639,70 @@ export default function HikeHighNepalWebsite() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center m-20">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
+              <div className="mb-6">
+                <div className="flex justify-center space-x-2 mb-4">
+                  <div className="w-3 h-3 bg-orange-400 rounded-full animate-bounce"></div>
+                  <div className="w-3 h-3 bg-red-400 rounded-full animate-bounce animation-delay-200"></div>
+                  <div className="w-3 h-3 bg-orange-400 rounded-full animate-bounce animation-delay-400"></div>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-poppins">
+                  Explore Our Complete Gallery
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Discover 40+ stunning photos from our Nepal adventures - from Everest Base Camp to hidden village gems
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link href="/gallery">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group px-8 py-4"
+                  >
+                    <Camera className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
+                    View Full Gallery
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <div className="flex -space-x-2">
+                    {Array.from({ length: 3 }, (_, i) => (
+                      <div
+                        key={i}
+                        className="w-8 h-8 bg-gradient-to-r from-orange-400 to-red-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+                      >
+                        {i + 1}
+                      </div>
+                    ))}
+                    <div className="w-8 h-8 bg-gray-200 rounded-full border-2 border-white flex items-center justify-center text-gray-600 text-xs font-bold">
+                      +40
+                    </div>
+                  </div>
+                  <span className="text-sm font-medium">More amazing photos</span>
+                </div>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-orange-200">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-600">40+</div>
+                  <div className="text-sm text-gray-600">Photos</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-600">8+</div>
+                  <div className="text-sm text-gray-600">Regions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-600">500+</div>
+                  <div className="text-sm text-gray-600">Adventures</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

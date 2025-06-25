@@ -54,7 +54,7 @@ export default function MadHoneyBlogPost() {
             {[
               { name: "About", href: "/#about" },
               { name: "Services", href: "/#services" },
-              { name: "Gallery", href: "/#gallery" },
+              { name: "Gallery", href: "/gallery" },
               { name: "Reviews", href: "/#testimonials" },
               { name: "Blog", href: "/blog" },
               { name: "FAQ", href: "/faq" },
