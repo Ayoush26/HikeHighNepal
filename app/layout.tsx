@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     "Nepal adventure travel",
     "independent traveller",
     "high altitude trekking",
+    "Freelance guide",
     "Nepal mountaineering association",
   ].join(", "),
   authors: [{ name: "HikeHigh Nepal", url: "https://hikehighnepal.com" }],

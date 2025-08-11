@@ -178,7 +178,7 @@ export default function HikeHighNepalWebsite() {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
+        {/* Mobile Navigation */}
           <MobileNav currentPath="/" />
         </div>
       </nav>
