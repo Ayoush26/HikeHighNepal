@@ -364,7 +364,7 @@ export default function HikeHighNepalWebsite() {
             <div className="relative animate-fade-in-right animation-delay-400">
               <div className="relative group">
                 <Image
-                  src="/images/Profile.jpeg"
+                  src="/images/medani_profile.jpg"
                   alt="Professional certified mountain guide from HikeHigh Nepal in the Himalayas"
                   width={700}
                   height={800}
