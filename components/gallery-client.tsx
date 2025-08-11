@@ -60,23 +60,27 @@ const generateGalleryData = () => {
     "Authentic experience",
   ]
 
-  return Array.from({ length: 46 }, (_, i) => ({
-    id: i + 1,
-    src: `/images/${i+1}.jpeg?height=${400 + (i % 3) * 100}&width=${300 + (i % 4) * 50}`,
-    title: `${descriptions[i % descriptions.length]} ${i + 1}`,
-    category: categories[i % categories.length],
-    location: locations[i % locations.length],
-    date: new Date(2024 - Math.floor(i / 12), i % 12, (i % 28) + 1).toLocaleDateString(),
-    likes: Math.floor(Math.random() * 100) + 10,
-    photographer: i % 3 === 0 ? "HikeHigh Nepal" : "Adventure Team",
-    description: `Amazing ${descriptions[i % descriptions.length].toLowerCase()} captured during our ${categories[i % categories.length]} expedition.`,
-    tags: [
-      categories[i % categories.length],
-      locations[i % locations.length],
-      i % 2 === 0 ? "Adventure" : "Culture",
-      i % 3 === 0 ? "Summit" : "Journey",
-    ],
-  }))
+  return Array.from({ length: 62 }, (_, i) => {
+    const ext = i + 1 > 47 ? 'jpg' : 'jpeg';
+    return {
+      id: i + 1,
+      src: `/images/${i + 1}.${ext}?height=${400 + (i % 3) * 100}&width=${300 + (i % 4) * 50}`,
+      title: `${descriptions[i % descriptions.length]} ${i + 1}`,
+      category: categories[i % categories.length],
+      location: locations[i % locations.length],
+      date: new Date(2024 - Math.floor(i / 12), i % 12, (i % 28) + 1).toLocaleDateString(),
+      likes: Math.floor(Math.random() * 100) + 10,
+      photographer: i % 3 === 0 ? "HikeHigh Nepal" : "Adventure Team",
+      description: `Amazing ${descriptions[i % descriptions.length].toLowerCase()} captured during our ${categories[i % categories.length]} expedition.`,
+      tags: [
+        categories[i % categories.length],
+        locations[i % locations.length],
+        i % 2 === 0 ? "Adventure" : "Culture",
+        i % 3 === 0 ? "Summit" : "Journey",
+      ],
+    }
+  })
+
 }
 
 const categoryIcons = {
@@ -183,9 +187,8 @@ export function GalleryClient() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-gray-700 hover:text-blue-600 transition-all duration-300 relative group ${
-                  item.href === "/gallery" ? "text-orange-600 font-semibold" : ""
-                }`}
+                className={`text-gray-700 hover:text-blue-600 transition-all duration-300 relative group ${item.href === "/gallery" ? "text-orange-600 font-semibold" : ""
+                  }`}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -287,7 +290,7 @@ export function GalleryClient() {
         </div>
       </section>
 
-     
+
       {/* Scroll to Top Button */}
       {showScrollTop && (
         <Button

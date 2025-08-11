@@ -253,7 +253,7 @@ export default function HikeHighNepalWebsite() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-orange-50/30 relative overflow-hidden">
+      {/*<section className="py-20 bg-gradient-to-br from-gray-50 to-orange-50/30 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
@@ -287,7 +287,7 @@ export default function HikeHighNepalWebsite() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* About Section */}
       <section id="about" className="py-24 relative overflow-hidden">
