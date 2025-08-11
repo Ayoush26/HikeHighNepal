@@ -16,6 +16,8 @@ import {
   Sunrise,
   TreePine,
   ArrowUp,
+  MessageCircle,
+  Instagram,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -181,6 +183,7 @@ export function GalleryClient() {
               { name: "Services", href: "/#services" },
               { name: "Gallery", href: "/gallery" },
               { name: "Reviews", href: "/#testimonials" },
+              { name: "Blog", href: "/#blog" },
               { name: "FAQ", href: "/faq" },
               { name: "Contact", href: "/#contact" },
             ].map((item) => (
@@ -196,10 +199,51 @@ export function GalleryClient() {
             ))}
           </div>
 
-          <Button className="hidden md:flex bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <Calendar className="mr-2 h-4 w-4" />
-            Book Adventure
-          </Button>
+          <div className="relative group">
+            <Button className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <Calendar className="mr-2 h-4 w-4" />
+              Book Adventure
+            </Button>
+
+            {/* Dropdown for booking options */}
+            <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+              <div className="p-4">
+                <h4 className="font-semibold text-gray-900 mb-3">Choose Your Booking Method</h4>
+                <div className="space-y-2">
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/9779842597331?text=Hi%20HikeHigh%20Nepal!%20I'm%20interested%20in%20booking%20a%20Himalayan%20adventure.%20Can%20you%20help%20me%20plan%20my%20trek?",
+                        "_blank",
+                      )
+                    }
+                    className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-200 group/item"
+                  >
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <MessageCircle className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-gray-900 group-hover/item:text-green-600">WhatsApp</p>
+                      <p className="text-xs text-gray-500">Instant response</p>
+                    </div>
+                  </button>
+
+                  <button
+                    onClick={() => window.open("https://instagram.com/hikehighnepal", "_blank")}
+                    className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-50 transition-colors duration-200 group/item"
+                  >
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                      <Instagram className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-gray-900 group-hover/item:text-pink-600">Instagram DM</p>
+                      <p className="text-xs text-gray-500">Message us directly</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <MobileNav currentPath="/gallery" />
         </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, MessageCircle, Instagram } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
@@ -67,8 +67,8 @@ export function MobileNav({ currentPath }: MobileNavProps) {
                     href={item.href}
                     onClick={closeMenu}
                     className={`block text-lg font-medium transition-colors duration-200 py-2 ${currentPath === item.href
-                        ? "text-orange-600 font-semibold"
-                        : "text-gray-700 hover:text-orange-600"
+                      ? "text-orange-600 font-semibold"
+                      : "text-gray-700 hover:text-orange-600"
                       }`}
                   >
                     {item.name}
@@ -77,16 +77,34 @@ export function MobileNav({ currentPath }: MobileNavProps) {
               ))}
             </ul>
           </nav>
-
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="p-6 border-t border-gray-200 bg-white">
-            <Button
-              onClick={closeMenu}
-              className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300"
-            >
-              <Calendar className="mr-2 h-4 w-4" />
-              Book Adventure
-            </Button>
+            <div className="space-y-3">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://wa.me/9779842597331?text=Hi%20HikeHigh%20Nepal!%20I'm%20interested%20in%20booking%20a%20Himalayan%20adventure.%20Can%20you%20help%20me%20plan%20my%20trek?",
+                    "_blank",
+                  )
+                  closeMenu()
+                }}
+                className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Book via WhatsApp
+              </button>
+
+              <button
+                onClick={() => {
+                  window.open("https://instagram.com/hikehighnepal", "_blank")
+                  closeMenu()
+                }}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center"
+              >
+                <Instagram className="mr-2 h-4 w-4" />
+                Book via Instagram
+              </button>
+            </div>
           </div>
 
           {/* Contact Info */}

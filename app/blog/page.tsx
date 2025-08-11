@@ -1,8 +1,9 @@
+
 import type { Metadata } from "next"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, User, ArrowRight } from "lucide-react"
+import { Calendar, Clock, User, ArrowRight, MessageCircle, Instagram } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { MobileNav } from "@/components/mobile-nav"
@@ -101,9 +102,8 @@ export default function BlogPage() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-gray-700 hover:text-blue-600 transition-all duration-300 relative group ${
-                  item.href === "/blog" ? "text-orange-600 font-semibold" : ""
-                }`}
+                className={`text-gray-700 hover:text-blue-600 transition-all duration-300 relative group ${item.href === "/blog" ? "text-orange-600 font-semibold" : ""
+                  }`}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -111,11 +111,7 @@ export default function BlogPage() {
             ))}
           </div>
 
-          {/* Desktop CTA Button */}
-          <Button className="hidden md:flex bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <Calendar className="mr-2 h-4 w-4" />
-            Book Adventure
-          </Button>
+      
 
           {/* Mobile Navigation */}
           <MobileNav currentPath="/blog" />

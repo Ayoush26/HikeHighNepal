@@ -261,10 +261,10 @@ export default function FAQPage() {
             </div>
 
             {/* Desktop CTA Button */}
-            <Button className="hidden md:flex bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            {/* <Button className="hidden md:flex bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
               <Calendar className="mr-2 h-4 w-4" />
               Book Adventure
-            </Button>
+            </Button> */}
 
             {/* Mobile Navigation */}
             <MobileNav currentPath="/faq" />
@@ -292,7 +292,7 @@ export default function FAQPage() {
               </p>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
+              {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
                 {[
                   { icon: Mountain, label: "500+ Treks Completed", color: "blue" },
                   { icon: Shield, label: "100% Safety Record", color: "green" },
@@ -308,7 +308,7 @@ export default function FAQPage() {
                     <p className="text-xs md:text-sm font-medium text-gray-700">{stat.label}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -383,7 +383,7 @@ export default function FAQPage() {
         </section>
 
         {/* Still Have Questions Section */}
-        <section className="py-16 bg-gradient-to-br from-orange-600 to-red-700 text-white">
+        {/* <section className="py-16 bg-gradient-to-br from-orange-600 to-red-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">Still Have Questions?</h2>
@@ -433,7 +433,7 @@ export default function FAQPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Related Resources */}
         <section className="py-16 bg-gray-50">

@@ -132,10 +132,51 @@ export default function HikeHighNepalWebsite() {
           </div>
 
           {/* Desktop CTA Button */}
-          <Button className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <Calendar className="mr-2 h-4 w-4" />
-            Book Adventure
-          </Button>
+          <div className="relative group">
+            <Button className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <Calendar className="mr-2 h-4 w-4" />
+              Book Adventure
+            </Button>
+
+            {/* Dropdown for booking options */}
+            <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+              <div className="p-4">
+                <h4 className="font-semibold text-gray-900 mb-3">Choose Your Booking Method</h4>
+                <div className="space-y-2">
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/9779842597331?text=Hi%20HikeHigh%20Nepal!%20I'm%20interested%20in%20booking%20a%20Himalayan%20adventure.%20Can%20you%20help%20me%20plan%20my%20trek?",
+                        "_blank",
+                      )
+                    }
+                    className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-200 group/item"
+                  >
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <MessageCircle className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-gray-900 group-hover/item:text-green-600">WhatsApp</p>
+                      <p className="text-xs text-gray-500">Instant response</p>
+                    </div>
+                  </button>
+
+                  <button
+                    onClick={() => window.open("https://instagram.com/hikehighnepal", "_blank")}
+                    className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-50 transition-colors duration-200 group/item"
+                  >
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                      <Instagram className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-gray-900 group-hover/item:text-pink-600">Instagram DM</p>
+                      <p className="text-xs text-gray-500">Message us directly</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Mobile Navigation */}
           <MobileNav currentPath="/" />
@@ -346,7 +387,7 @@ export default function HikeHighNepalWebsite() {
               </div>
 
 
-              <div className="flex flex-wrap gap-3 animate-fade-in-left animation-delay-800">
+              {/* <div className="flex flex-wrap gap-3 animate-fade-in-left animation-delay-800">
                 {["Everest Base Camp", "Annapurna Circuit", "Island Peak", "Mera Peak", "Manaslu Circuit"].map(
                   (badge, index) => (
                     <Badge
@@ -358,7 +399,7 @@ export default function HikeHighNepalWebsite() {
                     </Badge>
                   ),
                 )}
-              </div>
+              </div> */}
             </div>
 
             <div className="relative animate-fade-in-right animation-delay-400">
@@ -561,6 +602,7 @@ export default function HikeHighNepalWebsite() {
 
                     <Button
                       size="sm"
+                      onClick={() => window.open("https://wa.me/9779842597331", "_blank")}
                       className={`w-full bg-gradient-to-r from-${trek.color}-500 to-${trek.color}-600 hover:from-${trek.color}-600 hover:to-${trek.color}-700 transition-all duration-300 transform hover:scale-105`}
                     >
                       Plan This Trek
@@ -572,7 +614,7 @@ export default function HikeHighNepalWebsite() {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
               <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-2xl p-8 max-w-3xl mx-auto">
                 <h3 className="text-2xl font-bold mb-4 font-poppins">Ready to Plan Your Custom Trek?</h3>
                 <p className="text-orange-100 mb-6">
@@ -597,7 +639,7 @@ export default function HikeHighNepalWebsite() {
                   </Button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -653,7 +695,7 @@ export default function HikeHighNepalWebsite() {
                   Explore Our Complete Gallery
                 </h3>
                 <p className="text-lg text-gray-600 mb-6">
-                  Discover 40+ stunning photos from our Nepal adventures - from Everest Base Camp to hidden village gems
+                  Discover 60+ stunning photos from our Nepal adventures and hidden village gems
                 </p>
               </div>
 
@@ -680,7 +722,7 @@ export default function HikeHighNepalWebsite() {
                       </div>
                     ))}
                     <div className="w-8 h-8 bg-gray-200 rounded-full border-2 border-white flex items-center justify-center text-gray-600 text-xs font-bold">
-                      +40
+                      +60
                     </div>
                   </div>
                   <span className="text-sm font-medium">More amazing photos</span>
@@ -688,19 +730,19 @@ export default function HikeHighNepalWebsite() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-orange-200">
+              <div className="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-orange-200">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">40+</div>
+                  <div className="text-2xl font-bold text-orange-600">60+</div>
                   <div className="text-sm text-gray-600">Photos</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-red-600">8+</div>
                   <div className="text-sm text-gray-600">Regions</div>
                 </div>
-                <div className="text-center">
+                {/* <div className="text-center">
                   <div className="text-2xl font-bold text-orange-600">500+</div>
                   <div className="text-sm text-gray-600">Adventures</div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -708,7 +750,7 @@ export default function HikeHighNepalWebsite() {
       </section>
 
       {/* Testimonials Section */}
-      <section
+      {/* <section
         id="testimonials"
         className="py-24 bg-gradient-to-br from-gray-50 to-orange-50/30 relative overflow-hidden"
       >
@@ -786,7 +828,7 @@ export default function HikeHighNepalWebsite() {
               ))}
             </div>
 
-            {/* Testimonial Indicators */}
+    
             <div className="flex justify-center space-x-2 mt-8">
               {[0, 1, 2].map((index) => (
                 <button
@@ -800,7 +842,7 @@ export default function HikeHighNepalWebsite() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact" className="py-24 relative overflow-hidden">
@@ -811,9 +853,9 @@ export default function HikeHighNepalWebsite() {
           <div className="text-center mb-16">
             <Badge className="bg-white/20 text-white border-white/30 mb-4">Contact HikeHigh Nepal</Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
-              Ready for Your <span className="text-orange-200">Himalayan Adventure?</span>
+              Ready for Your <span className="text-orange-200">Trekking Journey?</span>
             </h2>
-            <p className="text-lg md:text-xl text-orange-100">Let's plan your perfect Nepal expedition together</p>
+            <p className="text-lg md:text-xl text-orange-100">Let's plan your perfect Nepal trekking together</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -821,8 +863,8 @@ export default function HikeHighNepalWebsite() {
               <h3 className="text-2xl md:text-3xl font-bold mb-8 font-poppins">Get in Touch</h3>
               <div className="space-y-6 mb-8">
                 {[
-                  { icon: MapPin, text: "Thamel, Kathmandu, Nepal", label: "Location" },
-                  { icon: Phone, text: "+977-9841234567", label: "Phone" },
+                  { icon: MapPin, text: "Bhaktapur, Nepal", label: "Location" },
+                  { icon: Phone, text: "+977-9805304176", label: "Phone" },
                   { icon: Mail, text: "info@hikehighnepal.com", label: "Email" },
                 ].map((contact, index) => (
                   <div
@@ -844,16 +886,15 @@ export default function HikeHighNepalWebsite() {
                 <h4 className="text-lg font-semibold mb-4">Follow Our Adventures</h4>
                 <div className="flex space-x-4">
                   {[
-                    { icon: Instagram, label: "Instagram" },
-                    { icon: Facebook, label: "Facebook" },
-                    { icon: MessageCircle, label: "WhatsApp" },
+                    { icon: Instagram, label: "Instagram", src: 'https://www.instagram.com/hikehighnepal' }
                   ].map((social, index) => (
                     <Button
                       key={index}
                       variant="outline"
                       size="icon"
-                      className="border-white/30 text-white hover:bg-white hover:text-orange-600 transition-all duration-300 transform hover:scale-110"
+                      className="border-white/30 text-white bg-white text-orange-600 transition-all duration-300 transform hover:scale-110"
                       aria-label={`Follow HikeHigh Nepal on ${social.label}`}
+                      onClick={() => window.open(social.src, "_blank")}
                     >
                       <social.icon className="h-5 w-5" />
                     </Button>
@@ -919,7 +960,7 @@ export default function HikeHighNepalWebsite() {
             </Card>
           </div>
         </div>
-      </section>
+      </section >
 
       <ChatWidget />
 
@@ -940,12 +981,11 @@ export default function HikeHighNepalWebsite() {
                 <span className="text-xl font-bold font-poppins">HikeHigh Nepal</span>
               </div>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Your trusted partner for authentic Himalayan adventures and professional mountaineering expeditions in
-                Nepal.
+                With a passion for trekking, mountaineering, and sustainable travel, we connect travelers with the breathtaking landscapes and warm communities that make Nepal unforgettable.
               </p>
               <div className="text-sm text-gray-500">
-                <p>NMA License: #1234</p>
-                <p>Established: 2016</p>
+                <p>HikeHigh Nepal is here to guide you to new heights.</p>
+
               </div>
             </div>
 
@@ -954,10 +994,11 @@ export default function HikeHighNepalWebsite() {
                 title: "Adventure Services",
                 items: [
                   "Everest Base Camp Trek",
-                  "Peak Climbing Expeditions",
+                  "Langtang Valley Trek",
                   "Annapurna Circuit",
+                  "Kori Village Trek",
                   "Custom Adventures",
-                  "Photography Tours",
+
                 ],
               },
               {
@@ -967,10 +1008,9 @@ export default function HikeHighNepalWebsite() {
               {
                 title: "Contact Information",
                 items: [
-                  "Thamel, Kathmandu 44600",
-                  "+977-9841234567",
+                  "Bhaktapur, Nepal",
+                  "+977-9805304176",
                   "info@hikehighnepal.com",
-                  "Emergency: +977-9841234568",
                 ],
               },
             ].map((section, index) => (
@@ -992,9 +1032,9 @@ export default function HikeHighNepalWebsite() {
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2024 HikeHigh Nepal. All rights reserved. | Licensed by Nepal Mountaineering Association
+              &copy; 2025 HikeHigh Nepal. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
+            {/* <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -1004,10 +1044,10 @@ export default function HikeHighNepalWebsite() {
               <Link href="/sitemap" className="hover:text-white transition-colors">
                 Sitemap
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   )
 }
